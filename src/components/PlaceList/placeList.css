@@ -1,0 +1,28 @@
+.placelist-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.placelist-view {
+    border: 1px solid #007AFF;
+    color: #007AFF;
+    font-family: Gilroy-SemiBold;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.all-item {
+    font-size: 20px;
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.card-contain {
+  flex-grow: 1;
+}

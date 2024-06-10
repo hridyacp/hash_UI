@@ -1,0 +1,12 @@
+.card-upper{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.card-heading{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    font-family: Gilroy-Medium;
+    font-size: 22px;
+}
