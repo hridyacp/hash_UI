@@ -10,26 +10,28 @@ const Footer = () => {
     return (
         <>
             <Grid container spacing={2} sx={{ backgroundColor: "#4E9DD6", marginTop: "40px" }} className="footer-main" justifyContent={"center"} alignItems={"center"}>
-                <Grid item xs={3} justifyContent={"center"}>
+                <Grid item xs={3} >
+                    
                     <img src={footerLogo} alt="logo" />
+                 
                 </Grid>
-                <Grid item xs={5}>
+                <Grid item xs={6}>
 
                     <div className="footer-links">
 
                         <span>&copy; 2022 Hashinclude</span>
-                        <div class="footer-border"></div>
+                        <div className="footer-border"></div>
                         <span>About Us</span>
-                        <div class="footer-border"></div>
+                        <div className="footer-border"></div>
                         <span>Privacy</span>
-                        <div class="footer-border"></div>
+                        <div className="footer-border"></div>
                         <span>Terms</span>
-                        <div class="footer-border"></div>
+                        <div className="footer-border"></div>
                         <span>FAQ</span>
-                        <div class="footer-border"></div>
+                        <div className="footer-border"></div>
                     </div>
                 </Grid>
-                <Grid item xs={4} justifyContent={"center"}>
+                <Grid item xs={3} justifyContent={"center"}>
 
                     <div className="footer-icons">
 

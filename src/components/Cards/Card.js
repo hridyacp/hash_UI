@@ -1,4 +1,4 @@
-import { Grid, makeStyles } from "@mui/material";
+import { Grid } from "@mui/material";
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import maps from '../../Assets/map.png';
@@ -8,17 +8,17 @@ import sight from '../../Assets/sight.png';
 import current from '../../Assets/current.png';
 import depth from '../../Assets/depth.png';
 import './Card.css';
+import camelize from "../../Utils/Utils";
 
 const Cards = ({ places }) => {
-    console.log(places?.distance_img, "places")
     return (
-        <Grid container xs={12}>
-            <Card sx={{ display: "flex", width: "100%", backgroundImage: `url(${places?.featured_image})`, color: "white", borderRadius: "10px", height: "260px", padding: "10px", gap: "4px", justifyContent: "space-between" }}>
+        <Grid container>
+            <Card sx={{ display: "flex", width: "100%", backgroundImage: `url(${places?.featured_image})`, backgroundSize: "cover", color: "white", borderRadius: "10px", height: "260px", padding: "10px", gap: "4px", justifyContent: "space-between" }}>
                 <div style={{ display: "flex", width: "60%", flexDirection: "column", justifyContent: "space-between" }}>
                     <div className="card-upper">
                         <div className="card-heading">
-                            <div>{places?.name?.toUpperCase()}</div>
-                            <div style={{ fontSize: "12px" }}>{places?.zone}</div>
+                            <div>{camelize(places?.name)}</div>
+                            <div style={{ fontSize: "12px", fontFamily: "Gilroy-Medium" }}>{places?.zone}</div>
                         </div>
                         <div className="card-favourite" style={{ background: 'rgba(255, 255, 255, 0.3)' }}>
                             <img src={fav} alt="fav" />
@@ -38,7 +38,7 @@ const Cards = ({ places }) => {
                                 <span style={{ fontSize: "14px" }}>{places?.top_divetime_min}-{places?.top_divetime_max} <span style={{ fontSize: "12px" }}>Mn</span></span>
                             </div>
                         </div>
-                        <div class="border"></div>
+                        <div className="border"></div>
                         <div className="card-right">
 
                             <div className="card-distance">
@@ -51,21 +51,21 @@ const Cards = ({ places }) => {
                         </div>
                     </div>
                 </div>
-                <div class="border-big"></div>
-                <div style={{ display: "flex", width: "fit-content", flexDirection: "column", justifyContent: "space-between" }}>
-                    <div>
+                <div className="border-big"></div>
+                <div style={{ display: "flex", width: "fit-content", flexDirection: "column", justifyContent: "space-between", alignItems: "center" }}>
+                    <div className="side-card">
                         <img src={depth} alt="depth" />
                         <div>{places?.depth_min}-{places?.depth_max} M</div>
                     </div>
-                    <div>
+                    <div className="side-card">
                         <img src={temper} alt="temperature" />
                         <div>{places?.water_temp_min}-{places?.water_temp_max}&deg; C</div>
                     </div>
-                    <div>
+                    <div className="side-card">
                         <img src={sight} alt="visibility" />
                         <div>{places?.visibility_min}-{places?.visibility_max} M</div>
                     </div>
-                    <div>
+                    <div className="side-card">
                         <img src={current} alt="current" />
                         <div>{places?.current}</div>
                     </div>

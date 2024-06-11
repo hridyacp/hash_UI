@@ -1,12 +1,13 @@
-.card-upper{
+.cardread-upper{
     display:flex;
     justify-content: space-between;
     align-items: flex-end;
+    height: 100%;
 }
 .card-heading{
     display:flex;
     flex-direction: column;
     gap:10px;
-    font-family: Gilroy-Medium;
+    font-family: Gilroy-Bold;
     font-size: 22px;
 }
